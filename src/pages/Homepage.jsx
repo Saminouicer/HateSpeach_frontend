@@ -18,7 +18,7 @@ const Homepage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/predict/", {
+      const response = await axios.post("https://hate-speech-api-kkar.onrender.com/", {
         text: text, 
       });
 
