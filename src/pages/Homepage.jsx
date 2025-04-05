@@ -18,9 +18,10 @@ const Homepage = () => {
     }
 
     try {
-      const response = await axios.post("https://hate-speech-api-kkar.onrender.com/predict", {
-        text: text, 
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/predict`, 
+        { text: text }
+      );
 
       const { hate_speech, type, description, confidence } = response.data.prediction;
 
